@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="お金と制度の話 - 療育手帳、特別児童扶養手当、障害年金など、利用できる制度を分かりやすく解説">
+    <title>お金と制度の話 | 父の樹会</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 制度ページ固有のスタイル */
+        .support-hero {
+            background: linear-gradient(120deg, #E3F2FD 0%, #E8F5E9 100%);
+            padding: 80px 0 60px;
+        }
+
+        .support-section {
+            padding: 60px 0;
+        }
+
+        .support-section.white-bg {
+            background-color: #fff;
+        }
+
+        .support-section.light-bg {
+            background-color: #FFF8E1;
+        }
+
+        .support-card {
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-left: 6px solid #4FC3F7;
+            transition: all 0.3s;
+        }
+
+        .support-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .support-card h3 {
+            font-size: 22px;
+            color: #519657;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .support-icon {
+            font-size: 28px;
+        }
+
+        .support-card .description {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .support-details {
+            background-color: #F9FBE7;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .support-detail-item {
+            margin-bottom: 15px;
+        }
+
+        .support-detail-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-label {
+            font-weight: 700;
+            color: #519657;
+            margin-bottom: 5px;
+        }
+
+        .detail-content {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .amount-highlight {
+            display: inline-block;
+            background-color: #FFB74D;
+            color: #fff;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            margin: 0 5px;
+        }
+
+        .info-box {
+            background-color: #E3F2FD;
+            border: 2px solid #4FC3F7;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .info-box-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1976D2;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-box-content {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 700;
+            color: #519657;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .faq-question::before {
+            content: 'Q';
+            background-color: #4FC3F7;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            padding-left: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>父の樹会</h1>
+                    <span class="tagline">障害児者の将来を守る</span>
+                </div>
+
+                <!-- PC用ナビゲーション -->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="top.html">ホーム</a></li>
+                        <li><a href="about.html">父の樹会について</a></li>
+                        <li><a href="voices.html">体験談</a></li>
+                        <li><a href="top.html#guide">年齢別ガイド</a></li>
+                    </ul>
+                </nav>
+
+                <!-- PC用 CTAボタン -->
+                <div class="header-cta">
+                    <a href="#donate" class="btn btn-header-donate">寄付・入会</a>
+                    <a href="#contact" class="btn btn-header-contact">相談・問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="support-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">
+                    知っているだけで、変わること。<br>
+                    お金と制度の話
+                </h2>
+                <p class="hero-description">
+                    障害のあるお子さんを育てる家庭が利用できる制度は、たくさんあります。<br>
+                    でも、「知らなかった」「申請してなかった」という声も多いのが現実。<br>
+                    ここでは、主な制度を分かりやすくご紹介します。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主な制度・手当 -->
+    <section class="support-section white-bg">
+        <div class="container">
+            <h2 class="section-title">利用できる主な制度・手当</h2>
+            <p class="section-subtitle">経済的負担を軽減するために</p>
+
+            <!-- 療育手帳 -->
+            <div class="support-card">
+                <h3><span class="support-icon">📘</span>療育手帳（愛の手帳）</h3>
+                <p class="description">
+                    知的障害のある方に交付される手帳。様々なサービスや割引を受けるための「証明書」のような役割を果たします。
+                </p>
+                <div class="support-details">
+                    <div class="support-detail-item">
+                        <div class="detail-label">対象</div>
+                        <div class="detail-content">知的障害のある方（18歳未満は児童相談所、18歳以上は知的障害者更生相談所で判定）</div>
+                    </div>
+                    <div class="support-detail-item">
+                        <div class="detail-label">メリット</div>
+                        <div class="detail-content">
+                            • 特別児童扶養手当や障害児福祉手当の受給条件<br>
+                            • 税金の控除・減免<br>
+                            • 公共交通機関の割引<br>
+                            • 各種サービスの利用（放課後等デイサービスなど）
+                        </div>
+                    </div>
+                    <div class="support-detail-item">
+                        <div class="detail-label">申請方法</div>
+                        <div class="detail-content">市区町村の障害福祉担当窓口で申請。医師の診断書や判定が必要。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 特別児童扶養手当 -->
+            <div class="support-card">
+                <h3><span class="support-icon">💰</span>特別児童扶養手当</h3>
+                <p class="description">
+                    20歳未満の障害児を育てている家庭に支給される手当。国の制度で、自治体を通じて支給されます。
+                </p>
+                <div class="support-details">
+                    <div class="support-detail-item">
+                        <div class="detail-label">対象</div>
+                        <div class="detail-content">20歳未満の障害児を養育している父母または養育者</div>
+                    </div>
+                    <div class="support-detail-item">
+                        <div class="detail-label">支給額（2024年度）</div>
+                        <div class="detail-content">
+                            • 1級（重度）：<span class="amount-highlight">月額 53,700円</span><br>
+                            • 2級（中度）：<span class="amount-highlight">月額 35,760円</span>
+                        </div>
+                    </div>
+                    <div class="support-detail-item">
+                        <div class="detail-label">所得制限</div>
+                        <div class="detail-content">あり（扶養人数により異なる）</div>
+                    </div>
+                    <div class="support-detail-item">
+                        <div class="detail-label">申請方法</div>
+                        <div class="detail-content">市区町村の障害福祉担当窓口で申請。医師の診断書が必要。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 障害児福祉手当 -->
+            <div class="support-card">
+                <h3><span class="support-icon">🎁</span>障害児福祉手当</h3>
+                <p class="description">
+                    重度の障害があるため、日常生活で常時介護を必要とする在宅の20歳未満の方に支給される手当。
+                </p>
+                <div class="support-details">
+                    <div class="support-detail-item">
+                        <div class="detail-label">対象</div>
+                        <div class="detail-content">重度障害児（身体障害者手帳1・2級程度、療育手帳A程度、または同等の障害）</div>
+                    </div>
+                    <div class="support-detail-item">
+                        <div class="detail-label">支給額（2024年度）</div>
+                        <div class="detail-content"><span class="amount-highlight">月額 15,220円</span></div>
+                    </div>
+                    <div class="support-detail-item">
+                        <div class="detail-label">注意点</div>
+                        <div class="detail-content">施設入所中は対象外。特別児童扶養手当と併給可能。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 障害年金 -->
+            <div class="support-card">
+                <h3><span class="support-icon">💳</span>障害年金</h3>
+                <p class="description">
+                    20歳になったら申請できる年金。障害基礎年金として、生涯にわたって支給されます。
+                </p>
+                <div class="support-details">
+                    <div class="support-detail-item">
+                        <div class="detail-label">対象</div>
+                        <div class="detail-content">20歳以上の障害者（初診日が20歳前の場合）</div>
+                    </div>
+                    <div class="support-detail-item">
+                        <div class="detail-label">支給額（2024年度）</div>
+                        <div class="detail-content">
+                            • 1級：<span class="amount-highlight">年額 約100万円</span>（月額 約8.3万円）<br>
+                            • 2級：<span class="amount-highlight">年額 約80万円</span>（月額 約6.7万円）
+                        </div>
+                    </div>
+                    <div class="support-detail-item">
+                        <div class="detail-label">申請方法</div>
+                        <div class="detail-content">市区町村の年金窓口または年金事務所。医師の診断書、病歴・就労状況申立書が必要。</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 医療費助成 -->
+            <div class="support-card">
+                <h3><span class="support-icon">🏥</span>医療費助成</h3>
+                <p class="description">
+                    障害に関連する医療費の自己負担を軽減する制度。自立支援医療や重度心身障害者医療費助成などがあります。
+                </p>
+                <div class="support-details">
+                    <div class="support-detail-item">
+                        <div class="detail-label">自立支援医療（育成医療・精神通院医療）</div>
+                        <div class="detail-content">
+                            障害を軽減するための医療（手術、リハビリ、精神科通院など）の自己負担が原則1割に。所得に応じた上限額あり。
+                        </div>
+                    </div>
+                    <div class="support-detail-item">
+                        <div class="detail-label">重度心身障害者医療費助成（各自治体）</div>
+                        <div class="detail-content">
+                            重度障害者の医療費を助成（自治体により内容が異なる）。入院・通院の医療費が無料または一部負担。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="support-section light-bg">
+        <div class="container">
+            <h2 class="section-title">よくある質問</h2>
+            <p class="section-subtitle">お金と制度に関する疑問にお答えします</p>
+
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">複数の手当を同時に受給できますか？</div>
+                    <div class="faq-answer">
+                        はい、多くの場合可能です。例えば、特別児童扶養手当と障害児福祉手当は併給できます。ただし、障害年金と特別児童扶養手当は20歳になると特別児童扶養手当が終了し、障害年金に切り替わります。詳しくは市区町村の窓口でご確認ください。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">所得制限があると聞きましたが、どのくらいですか？</div>
+                    <div class="faq-answer">
+                        特別児童扶養手当には所得制限があります。扶養親族の人数により異なりますが、例えば扶養親族3人の場合、年収約650万円程度が目安です（2024年度）。ただし、障害年金（20歳前障害）や障害児福祉手当にも所得制限がありますので、各制度の基準を確認しましょう。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">療育手帳がなくても手当は受けられますか？</div>
+                    <div class="faq-answer">
+                        療育手帳がなくても、医師の診断書があれば特別児童扶養手当や障害児福祉手当を申請できます。ただし、療育手帳を取得することで、様々なサービスや割引が受けられるため、取得をお勧めします。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">申請が複雑で不安です...</div>
+                    <div class="faq-answer">
+                        最初は複雑に感じるかもしれませんが、市区町村の障害福祉担当窓口で丁寧に教えてもらえます。また、父の樹会では、先輩家族が申請の経験をシェアしていますので、ぜひご相談ください。一緒に書類を準備することもできます。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 情報ボックス -->
+    <section class="support-section white-bg">
+        <div class="container">
+            <div class="info-box">
+                <div class="info-box-title">
+                    <span>💡</span>
+                    <span>個別相談も承ります</span>
+                </div>
+                <div class="info-box-content">
+                    制度のことで分からないことがあれば、父の樹会にご相談ください。<br>
+                    先輩家族の経験や、専門家のアドバイスを受けることができます。<br>
+                    一人で悩まず、まずはお気軽にお問い合わせください。
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn btn-primary">相談・問い合わせ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>障害児者の将来を守る父の樹会</h3>
+                    <p>〒263-0000<br>千葉県千葉市稲毛区...</p>
+                    <p>TEL: 043-000-0000</p>
+                </div>
+
+                <div>
+                    <h4>知りたい情報</h4>
+                    <ul>
+                        <li><a href="voices.html">体験談</a></li>
+                        <li><a href="support.html">お金と制度</a></li>
+                        <li><a href="activities.html">活動内容</a></li>
+                        <li><a href="top.html#guide">年齢別ガイド</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>年齢別ガイド</h4>
+                    <ul>
+                        <li><a href="guide-infant.html">乳幼児期（0〜6歳）</a></li>
+                        <li><a href="guide-school.html">学齢期（7〜18歳）</a></li>
+                        <li><a href="guide-youth.html">青年期（19〜29歳）</a></li>
+                        <li><a href="guide-adult.html">成人期（30歳〜）</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>お問い合わせ</h4>
+                    <ul>
+                        <li><a href="#">入会について</a></li>
+                        <li><a href="#">寄付について</a></li>
+                        <li><a href="#">相談・問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 障害児者の将来を守る父の樹会 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- スマホ用固定CTA -->
+    <div class="fixed-cta">
+        <a href="#donate" class="fixed-cta-btn cta-donate">
+            寄付・入会
+        </a>
+        <a href="#contact" class="fixed-cta-btn cta-contact">
+            相談・問い合わせ
+        </a>
+    </div>
+
+</body>
+
+</html>

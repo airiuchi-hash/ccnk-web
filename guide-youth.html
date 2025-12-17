@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="青年期（19〜29歳）の支援ガイド - 就労支援、グループホーム、余暇活動など、社会への一歩を応援する情報">
+    <title>青年期（19〜29歳）ガイド | 父の樹会</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ガイドページ固有のスタイル */
+        .guide-hero {
+            background: linear-gradient(120deg, #E8F5E9 0%, #FFF3E0 100%);
+            padding: 80px 0 60px;
+        }
+
+        .guide-section {
+            padding: 60px 0;
+        }
+
+        .guide-section.white-bg {
+            background-color: #fff;
+        }
+
+        .guide-section.light-bg {
+            background-color: #F9FBE7;
+        }
+
+        .age-badge {
+            display: inline-block;
+            background-color: #81C784;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .challenge-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-left: 6px solid #81C784;
+            transition: all 0.3s;
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .challenge-card h3 {
+            font-size: 20px;
+            color: #519657;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .challenge-icon {
+            font-size: 24px;
+        }
+
+        .challenge-card p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .challenge-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .challenge-card ul li {
+            font-size: 15px;
+            color: #666;
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .challenge-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #81C784;
+            font-weight: bold;
+        }
+
+        .support-box {
+            background: linear-gradient(135deg, #81C784 0%, #519657 100%);
+            color: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            margin: 40px 0;
+        }
+
+        .support-box h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .support-box p {
+            font-size: 17px;
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        .support-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .support-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .support-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .support-item p {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 700;
+            color: #519657;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .faq-question::before {
+            content: 'Q';
+            background-color: #81C784;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            padding-left: 40px;
+        }
+
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 30px;
+            background-color: #F1F8E9;
+            border-radius: 16px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+            background-color: #fff;
+            border-radius: 50px;
+            color: #519657;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-link:hover {
+            background-color: #81C784;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link.disabled {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>父の樹会</h1>
+                    <span class="tagline">障害児者の将来を守る</span>
+                </div>
+
+                <!-- PC用ナビゲーション -->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="top.html">ホーム</a></li>
+                        <li><a href="about.html">父の樹会について</a></li>
+                        <li><a href="voices.html">体験談</a></li>
+                        <li><a href="top.html#guide">年齢別ガイド</a></li>
+                    </ul>
+                </nav>
+
+                <!-- PC用 CTAボタン -->
+                <div class="header-cta">
+                    <a href="#donate" class="btn btn-header-donate">寄付・入会</a>
+                    <a href="#contact" class="btn btn-header-contact">相談・問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="guide-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="age-badge">🏢 青年期（19〜29歳）</span>
+                <h2 class="hero-title">
+                    社会への一歩を、全力で応援します。<br>
+                    自立への道のりを一緒に歩みましょう。
+                </h2>
+                <p class="hero-description">
+                    学校を卒業し、いよいよ社会への第一歩。不安もあると思います。<br>
+                    でも、焦る必要はありません。一人ひとりのペースで、できることを増やしていきましょう。<br>
+                    父の樹会には、就労支援からグループホーム、余暇活動まで、様々なサポートがあります。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- この時期の主な課題 -->
+    <section class="guide-section white-bg">
+        <div class="container">
+            <h2 class="section-title">この時期の主な課題</h2>
+            <p class="section-subtitle">社会参加と自立に向けた支援</p>
+
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <h3><span class="challenge-icon">💼</span>就労支援</h3>
+                    <p>働くことは、社会参加の大きな一歩。お子さんに合った働き方を見つけましょう。</p>
+                    <ul>
+                        <li>一般就労 vs 福祉的就労の選択</li>
+                        <li>就労移行支援事業所の活用</li>
+                        <li>就労継続支援A型・B型の違い</li>
+                        <li>ジョブコーチ（職場適応援助者）の利用</li>
+                        <li>定着支援で長く働き続ける</li>
+                    </ul>
+                </div>
+
+                <div class="challenge-card">
+                    <h3><span class="challenge-icon">🏠</span>グループホームでの生活</h3>
+                    <p>親元を離れ、仲間と暮らすことで社会性や自立心が育ちます。</p>
+                    <ul>
+                        <li>体験入居で雰囲気を確認</li>
+                        <li>世話人・支援員のサポート体制</li>
+                        <li>他の入居者との相性</li>
+                        <li>費用（家賃・食費・光熱費）の確認</li>
+                        <li>親の見守りと本人の自立のバランス</li>
+                    </ul>
+                </div>
+
+                <div class="challenge-card">
+                    <h3><span class="challenge-icon">⚽</span>余暇活動・仲間づくり</h3>
+                    <p>働くだけでなく、楽しみや生きがいを持つことも大切です。</p>
+                    <ul>
+                        <li>スポーツ・レクリエーション活動</li>
+                        <li>趣味のサークル・クラブ活動</li>
+                        <li>地域のイベント参加</li>
+                        <li>旅行・外出の機会</li>
+                        <li>同世代の仲間との交流</li>
+                    </ul>
+                </div>
+
+                <div class="challenge-card">
+                    <h3><span class="challenge-icon">💰</span>経済的自立への準備</h3>
+                    <p>働いて得た収入の管理、将来に向けた備えも考え始める時期です。</p>
+                    <ul>
+                        <li>障害年金（20歳から受給可能）の申請</li>
+                        <li>お金の使い方・管理方法を学ぶ</li>
+                        <li>将来の成年後見制度の検討</li>
+                        <li>貯蓄の習慣づくり</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 父の樹会のサポート -->
+    <section class="guide-section light-bg">
+        <div class="container">
+            <div class="support-box">
+                <h3>🤝 父の樹会がこの時期にできること</h3>
+                <p>
+                    働き始めたけれど職場になじめない、グループホーム選びで迷っている、余暇の過ごし方が分からない...。<br>
+                    父の樹会には、就労支援施設、グループホームなどの関係組織があり、様々な形でサポートができます。<br>
+                    また、青年学級などのイベントを通じて、本人同士・保護者同士の交流の場も提供しています。
+                </p>
+
+                <div class="support-list">
+                    <div class="support-item">
+                        <h4>🏭 就労支援事業所の紹介</h4>
+                        <p>父の樹会の関係組織（ガーデンセブンなど）で、就労継続支援B型の受け入れが可能です。</p>
+                    </div>
+
+                    <div class="support-item">
+                        <h4>🏡 グループホームの運営</h4>
+                        <p>グループホーム父の樹、メープルリーフなど、安心して暮らせる住まいを提供しています。</p>
+                    </div>
+
+                    <div class="support-item">
+                        <h4>🎉 余暇活動の企画</h4>
+                        <p>バーベキュー、ボウリング大会、バス旅行など、楽しいイベントを定期的に開催しています。</p>
+                    </div>
+
+                    <div class="support-item">
+                        <h4>👨‍👩‍👧 保護者の交流・相談</h4>
+                        <p>同世代のお子さんを持つ保護者同士で、悩みを共有したり情報交換ができます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="guide-section white-bg">
+        <div class="container">
+            <h2 class="section-title">よくある質問</h2>
+            <p class="section-subtitle">この時期によく寄せられる質問とその答え</p>
+
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">一般就労と福祉的就労、どちらを選べばいいですか？</div>
+                    <div class="faq-answer">
+                        お子さんの能力、希望、体力などを総合的に考えて判断します。一般就労は給与が高く、社会経験も豊かですが、ストレスも大きいです。福祉的就労（就労継続支援A型・B型）は支援が手厚く、無理なく働けますが、給与は低めです。まずは就労移行支援で実際に働いてみて、適性を確認することをお勧めします。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">グループホームに入るタイミングはいつがいいですか？</div>
+                    <div class="faq-answer">
+                        明確な「正解」はありませんが、親が元気なうちに経験させることをお勧めします。親なき後に初めての集団生活では、本人も不安が大きいです。20代のうちに体験入居や短期入所を経験し、徐々に慣らしていくのが理想的です。また、グループホームは空き待ちが長いことも多いので、早めの情報収集が大切です。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">障害年金はどうやって申請しますか？</div>
+                    <div class="faq-answer">
+                        障害年金は20歳になったら申請できます（障害基礎年金）。市区町村の年金窓口または年金事務所で手続きします。医師の診断書、病歴・就労状況等申立書などが必要です。申請は複雑なので、社会保険労務士に依頼する方も多いです。父の樹会でも申請サポートの経験がある会員から助言を得られます。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">休日の居場所がなく、家にこもりがちです...</div>
+                    <div class="faq-answer">
+                        余暇活動は生活の質を大きく左右します。父の樹会では、定期的にレクリエーションイベントを開催していますので、ぜひご参加ください。また、地域の生活介護事業所やNPOひだまりなどでも余暇プログラムがあります。同年代の仲間と過ごす時間は、本人にとっても保護者にとっても大切です。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ページナビゲーション -->
+    <div class="container">
+        <div class="page-navigation">
+            <a href="guide-school.html" class="nav-link">
+                <span>←</span>
+                <span>前の年齢層</span>
+            </a>
+            <a href="top.html#guide" class="link-text" style="font-size: 17px;">年齢別ガイド一覧へ戻る</a>
+            <a href="guide-adult.html" class="nav-link">
+                <span>次の年齢層</span>
+                <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>障害児者の将来を守る父の樹会</h3>
+                    <p>〒263-0000<br>千葉県千葉市稲毛区...</p>
+                    <p>TEL: 043-000-0000</p>
+                </div>
+
+                <div>
+                    <h4>知りたい情報</h4>
+                    <ul>
+                        <li><a href="voices.html">体験談</a></li>
+                        <li><a href="support.html">お金と制度</a></li>
+                        <li><a href="activities.html">活動内容</a></li>
+                        <li><a href="top.html#guide">年齢別ガイド</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>年齢別ガイド</h4>
+                    <ul>
+                        <li><a href="guide-infant.html">乳幼児期（0〜6歳）</a></li>
+                        <li><a href="guide-school.html">学齢期（7〜18歳）</a></li>
+                        <li><a href="guide-youth.html">青年期（19〜29歳）</a></li>
+                        <li><a href="guide-adult.html">成人期（30歳〜）</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>お問い合わせ</h4>
+                    <ul>
+                        <li><a href="#">入会について</a></li>
+                        <li><a href="#">寄付について</a></li>
+                        <li><a href="#">相談・問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 障害児者の将来を守る父の樹会 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- スマホ用固定CTA -->
+    <div class="fixed-cta">
+        <a href="#donate" class="fixed-cta-btn cta-donate">
+            寄付・入会
+        </a>
+        <a href="#contact" class="fixed-cta-btn cta-contact">
+            相談・問い合わせ
+        </a>
+    </div>
+
+</body>
+
+</html>

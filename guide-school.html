@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="学齢期（7〜18歳）の子育てガイド - 特別支援学校選び、放課後デイサービス、思春期の対応など、学校生活を支える情報">
+    <title>学齢期（7〜18歳）ガイド | 父の樹会</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ガイドページ固有のスタイル */
+        .guide-hero {
+            background: linear-gradient(120deg, #E3F2FD 0%, #F1F8E9 100%);
+            padding: 80px 0 60px;
+        }
+
+        .guide-section {
+            padding: 60px 0;
+        }
+
+        .guide-section.white-bg {
+            background-color: #fff;
+        }
+
+        .guide-section.light-bg {
+            background-color: #E8F5E9;
+        }
+
+        .age-badge {
+            display: inline-block;
+            background-color: #4FC3F7;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .challenge-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-left: 6px solid #4FC3F7;
+            transition: all 0.3s;
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .challenge-card h3 {
+            font-size: 20px;
+            color: #519657;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .challenge-icon {
+            font-size: 24px;
+        }
+
+        .challenge-card p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .challenge-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .challenge-card ul li {
+            font-size: 15px;
+            color: #666;
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .challenge-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4FC3F7;
+            font-weight: bold;
+        }
+
+        .support-box {
+            background: linear-gradient(135deg, #81C784 0%, #519657 100%);
+            color: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            margin: 40px 0;
+        }
+
+        .support-box h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .support-box p {
+            font-size: 17px;
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        .support-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .support-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .support-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .support-item p {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 700;
+            color: #519657;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .faq-question::before {
+            content: 'Q';
+            background-color: #4FC3F7;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            padding-left: 40px;
+        }
+
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 30px;
+            background-color: #F1F8E9;
+            border-radius: 16px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+            background-color: #fff;
+            border-radius: 50px;
+            color: #519657;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-link:hover {
+            background-color: #81C784;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link.disabled {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>父の樹会</h1>
+                    <span class="tagline">障害児者の将来を守る</span>
+                </div>
+
+                <!-- PC用ナビゲーション -->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="top.html">ホーム</a></li>
+                        <li><a href="about.html">父の樹会について</a></li>
+                        <li><a href="voices.html">体験談</a></li>
+                        <li><a href="top.html#guide">年齢別ガイド</a></li>
+                    </ul>
+                </nav>
+
+                <!-- PC用 CTAボタン -->
+                <div class="header-cta">
+                    <a href="#donate" class="btn btn-header-donate">寄付・入会</a>
+                    <a href="#contact" class="btn btn-header-contact">相談・問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="guide-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="age-badge">🎒 学齢期（7〜18歳）</span>
+                <h2 class="hero-title">
+                    学校生活を楽しく、安心に。<br>
+                    成長する子どもを全力で応援します。
+                </h2>
+                <p class="hero-description">
+                    学校選び、友達関係、思春期の変化...この時期ならではの悩みがあります。<br>
+                    でも、お子さんの成長を実感できる素敵な時期でもあります。<br>
+                    一緒に、お子さんの「できる」を増やしていきましょう。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- この時期の主な課題 -->
+    <section class="guide-section white-bg">
+        <div class="container">
+            <h2 class="section-title">この時期の主な課題</h2>
+            <p class="section-subtitle">学齢期の子育てで直面する課題と対応</p>
+
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <h3><span class="challenge-icon">🏫</span>特別支援学校・学級の選択</h3>
+                    <p>お子さんに合った学びの場を選ぶことは、その後の成長に大きく影響します。</p>
+                    <ul>
+                        <li>特別支援学校 vs 特別支援学級 vs 通常学級</li>
+                        <li>学校見学で確認すべきポイント</li>
+                        <li>個別支援計画の活用</li>
+                        <li>先輩保護者の体験談を聞く</li>
+                    </ul>
+                </div>
+
+                <div class="challenge-card">
+                    <h3><span class="challenge-icon">⚽</span>放課後等デイサービス</h3>
+                    <p>放課後や休日の居場所として、また社会性を育む場として活用できます。</p>
+                    <ul>
+                        <li>お子さんに合ったデイサービスの選び方</li>
+                        <li>療育型 vs 預かり型の違い</li>
+                        <li>送迎サービスの有無を確認</li>
+                        <li>複数のデイサービス併用も可能</li>
+                    </ul>
+                </div>
+
+                <div class="challenge-card">
+                    <h3><span class="challenge-icon">💭</span>思春期の心と体の変化</h3>
+                    <p>思春期は心も体も大きく変化する時期。適切なサポートが必要です。</p>
+                    <ul>
+                        <li>性教育の進め方（絵カードや動画活用）</li>
+                        <li>二次性徴への対応</li>
+                        <li>友人関係・いじめへの対処</li>
+                        <li>自己肯定感を育む関わり方</li>
+                    </ul>
+                </div>
+
+                <div class="challenge-card">
+                    <h3><span class="challenge-icon">🎓</span>進路選択（高校・就労）</h3>
+                    <p>中学卒業後の進路は、将来の自立に向けた大切な選択です。</p>
+                    <ul>
+                        <li>高等部（特別支援学校）への進学</li>
+                        <li>高等特別支援学校の選択肢</li>
+                        <li>職業訓練校・就労移行支援</li>
+                        <li>早めの進路相談が重要</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 父の樹会のサポート -->
+    <section class="guide-section light-bg">
+        <div class="container">
+            <div class="support-box">
+                <h3>🤝 父の樹会がこの時期にできること</h3>
+                <p>
+                    学校でのトラブル、友達関係の悩み、進路選択の不安...。<br>
+                    父の樹会には、学齢期のお子さんを育ててきた、また今育てている仲間がいます。<br>
+                    学校との付き合い方、放課後の過ごし方、将来の選択肢について、一緒に考えましょう。
+                </p>
+
+                <div class="support-list">
+                    <div class="support-item">
+                        <h4>📚 学習会・勉強会</h4>
+                        <p>進路選択、性教育、学校との連携方法など、この時期に必要な知識を学べます。</p>
+                    </div>
+
+                    <div class="support-item">
+                        <h4>🎉 青年学級・レクリエーション</h4>
+                        <p>お子さんが仲間と楽しく過ごせる場を提供。保護者も交流できます。</p>
+                    </div>
+
+                    <div class="support-item">
+                        <h4>🗣️ 進路相談</h4>
+                        <p>高校選び、就労準備など、将来を見据えた相談に先輩家族が対応します。</p>
+                    </div>
+
+                    <div class="support-item">
+                        <h4>👥 保護者交流会</h4>
+                        <p>同じ学齢期のお子さんを持つ保護者同士で情報交換や悩み相談ができます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="guide-section white-bg">
+        <div class="container">
+            <h2 class="section-title">よくある質問</h2>
+            <p class="section-subtitle">この時期によく寄せられる質問とその答え</p>
+
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">特別支援学校と特別支援学級、どちらを選べばいいですか？</div>
+                    <div class="faq-answer">
+                        お子さんの障害の程度、性格、必要な支援内容によって変わります。特別支援学校は専門的な支援が手厚く、小集団での学びが可能です。特別支援学級は通常学級との交流があり、地域の学校に通えるメリットがあります。両方の学校を見学し、お子さんに合った環境を選ぶことが大切です。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">放課後等デイサービスは必ず利用すべきですか？</div>
+                    <div class="faq-answer">
+                        必須ではありませんが、多くの家庭で利用しています。お子さんの居場所づくり、社会性の学び、保護者のレスパイト（休息）など、メリットは多いです。ただし、お子さんが疲れすぎないよう、週の利用回数は調整しましょう。無理に詰め込むより、お子さんのペースを大切に。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">学校でいじめにあっているようですが、どう対応すればいいですか？</div>
+                    <div class="faq-answer">
+                        まずは学校に相談し、事実確認をしてもらいましょう。担任だけでなく、特別支援コーディネーターや校長にも報告を。いじめは絶対に許されません。学校が適切に対応しない場合は、教育委員会への相談も検討してください。父の樹会でも同様の経験をした家族からアドバイスが得られます。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">高校卒業後の進路はいつから考え始めればいいですか？</div>
+                    <div class="faq-answer">
+                        中学1年生頃から少しずつ情報収集を始めることをお勧めします。高等部、就労移行支援、職業訓練校など、選択肢は多様です。中学2年生で職場見学、中学3年生で進路を絞り込むのが一般的です。早めに動くことで、お子さんに合った選択肢が見つかります。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ページナビゲーション -->
+    <div class="container">
+        <div class="page-navigation">
+            <a href="guide-infant.html" class="nav-link">
+                <span>←</span>
+                <span>前の年齢層</span>
+            </a>
+            <a href="top.html#guide" class="link-text" style="font-size: 17px;">年齢別ガイド一覧へ戻る</a>
+            <a href="guide-youth.html" class="nav-link">
+                <span>次の年齢層</span>
+                <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>障害児者の将来を守る父の樹会</h3>
+                    <p>〒263-0000<br>千葉県千葉市稲毛区...</p>
+                    <p>TEL: 043-000-0000</p>
+                </div>
+
+                <div>
+                    <h4>知りたい情報</h4>
+                    <ul>
+                        <li><a href="voices.html">体験談</a></li>
+                        <li><a href="support.html">お金と制度</a></li>
+                        <li><a href="activities.html">活動内容</a></li>
+                        <li><a href="top.html#guide">年齢別ガイド</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>年齢別ガイド</h4>
+                    <ul>
+                        <li><a href="guide-infant.html">乳幼児期（0〜6歳）</a></li>
+                        <li><a href="guide-school.html">学齢期（7〜18歳）</a></li>
+                        <li><a href="guide-youth.html">青年期（19〜29歳）</a></li>
+                        <li><a href="guide-adult.html">成人期（30歳〜）</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>お問い合わせ</h4>
+                    <ul>
+                        <li><a href="#">入会について</a></li>
+                        <li><a href="#">寄付について</a></li>
+                        <li><a href="#">相談・問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 障害児者の将来を守る父の樹会 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- スマホ用固定CTA -->
+    <div class="fixed-cta">
+        <a href="#donate" class="fixed-cta-btn cta-donate">
+            寄付・入会
+        </a>
+        <a href="#contact" class="fixed-cta-btn cta-contact">
+            相談・問い合わせ
+        </a>
+    </div>
+
+</body>
+
+</html>

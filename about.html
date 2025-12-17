@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="父の樹会について - 1978年設立、障害児を育てる親たちが支え合うコミュニティ。父親も母親も共に歩む「家族の輪」を作ります。">
+    <title>父の樹会について | 障害児者の将来を守る父の樹会</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* aboutページ固有のスタイル */
+        .about-hero {
+            background: linear-gradient(120deg, #E8F5E9 0%, #E3F2FD 100%);
+            padding: 80px 0 60px;
+        }
+
+        .about-section {
+            padding: 60px 0;
+        }
+
+        .about-section.white-bg {
+            background-color: #fff;
+        }
+
+        .about-section.light-bg {
+            background-color: #F1F8E9;
+        }
+
+        .content-box {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .mission-statement {
+            font-size: 20px;
+            line-height: 2;
+            color: #2C2C2C;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            border-left: 6px solid #81C784;
+        }
+
+        .highlight-text {
+            color: #519657;
+            font-weight: 700;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-item {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            color: #519657;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .activity-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .activity-list li {
+            background-color: #fff;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border-left: 4px solid #FFB74D;
+            font-size: 17px;
+            transition: background-color 0.3s;
+        }
+
+        .activity-list li:hover {
+            background-color: #FFF8E1;
+        }
+
+        .activity-list li::before {
+            content: '✓';
+            color: #FFB74D;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .related-org-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .org-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        .org-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .org-card h4 {
+            font-size: 18px;
+            color: #2C2C2C;
+            margin-bottom: 10px;
+        }
+
+        .org-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .timeline-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            margin: 20px 0;
+        }
+
+        .timeline-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-year {
+            font-size: 18px;
+            font-weight: 700;
+            color: #519657;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #81C784 0%, #519657 100%);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background-color: #fff;
+            color: #519657;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-outline-white {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .btn-outline-white:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>父の樹会</h1>
+                    <span class="tagline">障害児者の将来を守る</span>
+                </div>
+
+                <!-- PC用ナビゲーション -->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="top.html">ホーム</a></li>
+                        <li><a href="about.html">父の樹会について</a></li>
+                        <li><a href="voices.html">体験談</a></li>
+                        <li><a href="top.html#guide">年齢別ガイド</a></li>
+                    </ul>
+                </nav>
+
+                <!-- PC用 CTAボタン -->
+                <div class="header-cta">
+                    <a href="#donate" class="btn btn-header-donate">寄付・入会</a>
+                    <a href="#contact" class="btn btn-header-contact">相談・問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">1978年設立・45年の実績</span>
+                <h2 class="hero-title">
+                    一人で抱え込まないで。<br>
+                    共に歩む仲間がここに。
+                </h2>
+                <p class="hero-description">
+                    父の樹会は、障害児を育てる親たちが支え合うコミュニティです。<br>
+                    母親だけに負担をかけず、父親も積極的に参加する。<br>
+                    そんな「家族の輪」を45年以上続けてきました。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 私たちの想い -->
+    <section class="about-section white-bg">
+        <div class="container">
+            <div class="content-box">
+                <h2 class="section-title">私たちの想い</h2>
+                <p class="section-subtitle">「子供の生涯の幸せシステム」を一緒に作りましょう</p>
+
+                <div class="mission-statement">
+                    <p>
+                        子どもが障害と診断されたとき、多くの母親が孤独と不安に押しつぶされそうになります。<br>
+                        「この子の将来はどうなるの？」<br>
+                        「私一人で育てていけるのだろうか...」
+                    </p>
+                    <p style="margin-top: 20px;">
+                        父の樹会は、そんなあなたの不安に寄り添います。<br>
+                        <span
+                            class="highlight-text">母親だけではなく、父親も共に子育ての当事者として参加する</span>という理念のもと、1978年に千葉大学教育学部付属特別支援学校の保護者が中心となって立ち上げました。
+                    </p>
+                    <p style="margin-top: 20px;">
+                        同じ経験をした先輩たちが、あなたの悩みに耳を傾け、一緒に解決策を考えます。<br>
+                        ここには、<span class="highlight-text">「わかってくれる仲間」がいます。</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 父の樹会の3つの特徴 -->
+    <section class="about-section light-bg">
+        <div class="container">
+            <h2 class="section-title">父の樹会の3つの特徴</h2>
+            <p class="section-subtitle">他の親の会とは違う、私たちならではの強み</p>
+
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3>父親も主役</h3>
+                    <p>母親だけに負担をかけず、父親も率先して活動に参加。夫婦で支え合える環境を作ります。</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🤝</div>
+                    <h3>ピアサポート</h3>
+                    <p>同じ経験をした先輩家族が、診断直後の不安や学校選び、就労支援まで実体験をもとにアドバイスします。</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🏡</div>
+                    <h3>生涯サポート</h3>
+                    <p>幼児期から成人期、そして「親なき後」まで。人生の各ステージで必要な支援を提供します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主な活動内容 -->
+    <section class="about-section white-bg">
+        <div class="container">
+            <div class="content-box">
+                <h2 class="section-title">主な活動内容</h2>
+                <p class="section-subtitle">障害児者とご家族の「心の拠り所」となるために</p>
+
+                <p style="text-align: center; margin-bottom: 30px; font-size: 17px; color: #555;">
+                    在校生や学校を卒業した後の子どもたちが安心して生活できるよう、<br>
+                    さまざまな支援活動を行っています。
+                </p>
+
+                <ul class="activity-list">
+                    <li>余暇活動の支援（レクリエーション、イベント開催）</li>
+                    <li>住居・生活相談（グループホーム、一人暮らし支援）</li>
+                    <li>社会生活の支援（日常生活のサポート）</li>
+                    <li>成年後見など親なき後の不安への対応</li>
+                    <li>就労支援・福祉就労のサポート</li>
+                    <li>定期的な学習会・交流会の開催</li>
+                </ul>
+
+                <p style="text-align: center; margin-top: 40px;">
+                    <a href="#" class="link-text" style="font-size: 17px;">活動の詳細を見る →</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 関係組織 -->
+    <section class="about-section light-bg">
+        <div class="container">
+            <h2 class="section-title">関係組織</h2>
+            <p class="section-subtitle">会員の多様なニーズに応えるために</p>
+
+            <p style="text-align: center; margin-bottom: 40px; font-size: 17px; color: #555;">
+                父の樹会の発足以降、会員の皆さまの多様なニーズにお応えするため、<br>
+                さまざまな関係組織を設立してきました。（当会はこれらの組織の後援会です）
+            </p>
+
+            <div class="related-org-grid">
+                <div class="org-card">
+                    <h4>社会福祉法人 父の樹会</h4>
+                    <p>障害者支援の中核組織</p>
+                </div>
+
+                <div class="org-card">
+                    <h4>あけぼの園</h4>
+                    <p>障害者支援施設</p>
+                </div>
+
+                <div class="org-card">
+                    <h4>父の樹園</h4>
+                    <p>生活介護事業所</p>
+                </div>
+
+                <div class="org-card">
+                    <h4>ガーデンセブン</h4>
+                    <p>就労継続支援B型事業所</p>
+                </div>
+
+                <div class="org-card">
+                    <h4>グループホーム父の樹</h4>
+                    <p>共同生活援助施設</p>
+                </div>
+
+                <div class="org-card">
+                    <h4>おおぞら園</h4>
+                    <p>障害者支援施設</p>
+                </div>
+
+                <div class="org-card">
+                    <h4>NPOひだまり</h4>
+                    <p>地域生活支援</p>
+                </div>
+
+                <div class="org-card">
+                    <h4>メープルリーフ</h4>
+                    <p>グループホーム</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 沿革 -->
+    <section class="about-section white-bg">
+        <div class="container">
+            <div class="content-box">
+                <h2 class="section-title">沿革</h2>
+                <p class="section-subtitle">45年以上の歩み</p>
+
+                <div class="timeline-box">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1978年</div>
+                        <div class="timeline-content">
+                            千葉大学教育学部付属特別支援学校の保護者が中心となり、「障害児者の将来を守る父の樹会」を設立
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1980年代</div>
+                        <div class="timeline-content">
+                            会員のニーズに応え、社会福祉法人父の樹会を発足。障害者支援事業を本格化
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1990年代</div>
+                        <div class="timeline-content">
+                            あけぼの園、父の樹園などの施設を開設。就労支援・生活支援の拠点を拡充
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2000年代</div>
+                        <div class="timeline-content">
+                            ガーデンセブン、グループホーム父の樹を開設。地域での自立生活を支援
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2010年代〜現在</div>
+                        <div class="timeline-content">
+                            NPOひだまりなど関係組織との連携を強化。「親なき後」の支援体制を構築し、生涯にわたるサポート体制を確立
+                        </div>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-top: 30px;">
+                    <a href="#" class="link-text" style="font-size: 17px;">設立の経緯を詳しく見る →</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>一人で悩まず、まずはご相談ください</h2>
+            <p>
+                父の樹会には、同じ悩みを抱えてきた仲間がいます。<br>
+                あなたの不安や疑問に、私たちが寄り添います。
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn-white">無料相談する</a>
+                <a href="#join" class="btn-outline-white">入会について知る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>障害児者の将来を守る父の樹会</h3>
+                    <p>〒263-0000<br>千葉県千葉市稲毛区...</p>
+                    <p>TEL: 043-000-0000</p>
+                </div>
+
+                <div>
+                    <h4>知りたい情報</h4>
+                    <ul>
+                        <li><a href="voices.html">体験談</a></li>
+                        <li><a href="support.html">お金と制度</a></li>
+                        <li><a href="activities.html">活動内容</a></li>
+                        <li><a href="top.html#guide">年齢別ガイド</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>父の樹会について</h4>
+                    <ul>
+                        <li><a href="about.html">私たちの想い</a></li>
+                        <li><a href="#">活動実績</a></li>
+                        <li><a href="#">関係組織</a></li>
+                        <li><a href="#">よくある質問</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>お問い合わせ</h4>
+                    <ul>
+                        <li><a href="#">入会について</a></li>
+                        <li><a href="#">寄付について</a></li>
+                        <li><a href="#">相談・問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 障害児者の将来を守る父の樹会 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- スマホ用固定CTA -->
+    <div class="fixed-cta">
+        <a href="#donate" class="fixed-cta-btn cta-donate">
+            寄付・入会
+        </a>
+        <a href="#contact" class="fixed-cta-btn cta-contact">
+            相談・問い合わせ
+        </a>
+    </div>
+
+</body>
+
+</html>
