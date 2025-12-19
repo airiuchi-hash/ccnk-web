@@ -1,7 +1,7 @@
 # Repository Guidelines
 
 ## プロジェクト構成と配置
-- 静的サイト。各ページはリポジトリ直下にあり、メインは `top.html`（アンカーは `#voice` `#guide` `#access`）。補助ページは `about.html` `activities.html` `support.html` `voices.html` と各ライフステージガイド (`guide-infant.html` `guide-school.html` `guide-youth.html` `guide-adult.html`)。
+- 静的サイト。各ページはリポジトリ直下にあり、メインは `top.html`（アンカーは `#voice` `#guide` `#access`）。補助ページは `about.html` `activities.html` `support.html` `voices.html` と各ライフステージガイド (`guide-infant.html` `guide-school.html` `guide-youth.html` `guide-adult.html`)、入会案内 `join.html`、相談窓口 `contact.html`。
 - `style.css` に共通スタイルがまとまっています。下書き用の `HP改修案_v2.html` と `test.html` は削除済みで公開導線に含めないでください。
 - 画像などの新規アセットを置く場合は HTML と同階層に保存し、相対パスで参照します（現状はテキストと絵文字のみ）。ファイル名はハイフン区切りの半角英数字で統一してください。
 - ページ間のリンクはトップからたどれるよう維持します。孤立ページを作った場合は必ずナビゲーションやフッターに導線を追加します。
@@ -43,7 +43,7 @@
 - 年齢別ガイドの見直しタイミング: 学齢期は毎年2〜3月、成人期は制度改定時、共通でアンカー導線と固定CTAの動作確認をセットで行う。
 
 ## テスト指針
-- PC/スマホ幅で手動QA。スティッキーヘッダー、モバイル固定CTA、アンカー（`#voice` `#guide` `#access` `#contact` `#donate`）の挙動を確認。
+- PC/スマホ幅で手動QA。スティッキーヘッダー、モバイル固定CTA、アンカー（`#voice` `#guide` `#access`）の挙動を確認。入会/相談は `join.html` / `contact.html` への導線をクリック確認。
 - CSS変更後はタイポグラフィや余白、`--color-base` 上でのコントラストを目視。ボタンのホバー/フォーカスが残っているか、フッターが固定CTAと重ならないかをチェック。可能なら画面読み上げでリンクテキストが意味を持つかも確認。
 - 新規ページ追加時は `top.html` への戻りナビや共有ヘッダー/フッターのスタイル崩れ有無を確認。ファイルを増やした場合はリンク切れがないか `http.server` 上で全ページを一巡してください。
 - 変更が小さくても、修正箇所をスクリーンショット1〜2枚で残しておくと差分確認と共有が楽になります。
