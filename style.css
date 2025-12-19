@@ -1019,16 +1019,6 @@ a:focus {
         margin-top: -30px;
     }
 
-    /* モバイルではヒーロー装飾を控えめにする */
-    .hero {
-        padding: 100px 0 80px;
-    }
-
-    .hero-decoration {
-        font-size: 18px;
-        opacity: 0.4;
-    }
-
     .nav {
         display: none;
         /* 簡易的に隠す（ハンバーガーメニュー想定） */
