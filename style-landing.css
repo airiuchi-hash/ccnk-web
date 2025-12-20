@@ -1,0 +1,545 @@
+/* ============================================
+   ランディングページ専用スタイル
+   初めて障害児の親になった人に寄り添う、安心できるデザイン
+============================================ */
+
+/* リセット & ベース設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', 'BIZ UDPGothic', sans-serif;
+    color: #4a4a4a;
+    line-height: 1.8;
+    background: linear-gradient(180deg, #fef9f5 0%, #faf5f0 100%);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.landing-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.landing-main {
+    flex: 1;
+    padding: 60px 0;
+}
+
+/* ============================================
+   オープニングセクション
+============================================ */
+.opening-section {
+    text-align: center;
+    padding: 80px 0 60px;
+    background: linear-gradient(135deg, #fff5f0 0%, #f0f8f5 50%, #f5f0ff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.opening-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 182, 193, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.opening-section::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(181, 228, 140, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.opening-content {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.opening-title {
+    font-size: 42px;
+    font-weight: 300;
+    color: #6b5b73;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    position: relative;
+}
+
+.opening-title::before {
+    content: '🌸';
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    opacity: 0.6;
+}
+
+.opening-title::after {
+    content: '💚';
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    opacity: 0.6;
+}
+
+.opening-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #6b5b73;
+    line-height: 2;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   共感セクション
+============================================ */
+.empathy-section {
+    padding: 60px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #fef5f5 100%);
+    position: relative;
+}
+
+.empathy-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.empathy-text {
+    font-size: 17px;
+    line-height: 2.2;
+    color: #6b5b73;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 240, 245, 0.5);
+    border-radius: 12px;
+    border-left: 4px solid #ffb6c1;
+}
+
+.empathy-text:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   安心セクション
+============================================ */
+.reassurance-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #f0f8f5 0%, #f5faf8 100%);
+}
+
+.reassurance-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    font-size: 32px;
+    font-weight: 400;
+    color: #6b5b73;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 0.05em;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-heading::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #ffb6c1 0%, #b5e48c 100%);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.reassurance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.reassurance-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #fffaf5 100%);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(255, 182, 193, 0.2);
+}
+
+.reassurance-item:nth-child(1) {
+    border-color: rgba(255, 182, 193, 0.3);
+}
+
+.reassurance-item:nth-child(2) {
+    border-color: rgba(181, 228, 140, 0.3);
+}
+
+.reassurance-item:nth-child(3) {
+    border-color: rgba(176, 196, 222, 0.3);
+}
+
+.reassurance-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 182, 193, 0.5);
+}
+
+.reassurance-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.reassurance-item h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #6b5b73;
+    margin-bottom: 15px;
+}
+
+.reassurance-item p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #6a6a6a;
+}
+
+/* ============================================
+   優しいメッセージセクション
+============================================ */
+.gentle-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #fffaf5 0%, #f5f0ff 100%);
+    position: relative;
+}
+
+.gentle-section::before {
+    content: '💜';
+    position: absolute;
+    top: 40px;
+    left: 5%;
+    font-size: 60px;
+    opacity: 0.1;
+}
+
+.gentle-section::after {
+    content: '💙';
+    position: absolute;
+    bottom: 40px;
+    right: 5%;
+    font-size: 60px;
+    opacity: 0.1;
+}
+
+.gentle-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gentle-text {
+    font-size: 17px;
+    line-height: 2.2;
+    color: #6b5b73;
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: rgba(255, 250, 245, 0.7);
+    border-radius: 12px;
+    border-left: 4px solid #b5e48c;
+}
+
+.gentle-text:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   次のステップセクション
+============================================ */
+.next-steps-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #f0f8f5 0%, #f5faf8 100%);
+}
+
+.next-steps-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.step-item {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #ffffff 0%, #fffaf5 100%);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(181, 228, 140, 0.2);
+}
+
+.step-item:nth-child(1) {
+    border-color: rgba(255, 182, 193, 0.3);
+}
+
+.step-item:nth-child(2) {
+    border-color: rgba(181, 228, 140, 0.3);
+}
+
+.step-item:nth-child(3) {
+    border-color: rgba(176, 196, 222, 0.3);
+}
+
+.step-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-color: rgba(181, 228, 140, 0.5);
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ffb6c1 0%, #b5e48c 100%);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #6b5b73;
+    margin-bottom: 12px;
+}
+
+.step-content p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #6a6a6a;
+    margin-bottom: 15px;
+}
+
+.step-link {
+    display: inline-block;
+    color: #8b7fa8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 8px 16px;
+    background-color: rgba(181, 228, 140, 0.2);
+    border-radius: 6px;
+}
+
+.step-link:hover {
+    color: #6b5b73;
+    background-color: rgba(181, 228, 140, 0.3);
+    text-decoration: none;
+}
+
+/* ============================================
+   締めくくりセクション
+============================================ */
+.closing-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #fff5f0 0%, #f0f8f5 100%);
+    text-align: center;
+    position: relative;
+}
+
+.closing-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.closing-text {
+    font-size: 18px;
+    line-height: 2.2;
+    color: #6b5b73;
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: rgba(255, 250, 245, 0.7);
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.closing-cta {
+    margin-top: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, #b5e48c 0%, #8b7fa8 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(181, 228, 140, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #a5d47c 0%, #7b6f98 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(181, 228, 140, 0.5);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   フッター
+============================================ */
+.landing-footer {
+    background: linear-gradient(180deg, #f5f5f5 0%, #f0f0f0 100%);
+    padding: 40px 0;
+    margin-top: 60px;
+    border-top: 2px solid rgba(181, 228, 140, 0.3);
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 14px;
+    color: #6a6a6a;
+    margin-bottom: 15px;
+}
+
+.footer-text a {
+    color: #8b7fa8;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.footer-text a:hover {
+    color: #6b5b73;
+    background-color: rgba(181, 228, 140, 0.2);
+    text-decoration: none;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #8a8a8a;
+}
+
+/* ============================================
+   レスポンシブ対応
+============================================ */
+@media (max-width: 768px) {
+    .landing-main {
+        padding: 40px 0;
+    }
+
+    .opening-section {
+        padding: 60px 0 40px;
+    }
+
+    .opening-title {
+        font-size: 32px;
+    }
+
+    .opening-subtitle {
+        font-size: 16px;
+    }
+
+    .section-heading {
+        font-size: 26px;
+    }
+
+    .reassurance-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .step-item {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .step-number {
+        margin: 0 auto;
+    }
+
+    .empathy-text,
+    .gentle-text,
+    .closing-text {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 14px 30px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .opening-title {
+        font-size: 28px;
+    }
+
+    .section-heading {
+        font-size: 22px;
+    }
+
+    .reassurance-item,
+    .step-item {
+        padding: 20px;
+    }
+}
+

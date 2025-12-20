@@ -79,11 +79,15 @@ a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+    gap: 15px;
 }
 
 .logo {
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
+    min-width: 0;
 }
 
 .logo h1 {
@@ -91,27 +95,41 @@ a:focus {
     color: var(--color-main-dark);
     font-weight: 700;
     line-height: 1.2;
+    white-space: nowrap;
 }
 
 .logo .tagline {
     font-size: 12px;
     color: var(--color-text-light);
     font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 15px;
     align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
 }
 
 .nav a {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--color-text);
-    padding: 8px 12px;
+    padding: 6px 10px;
     border-radius: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .nav a:hover {
@@ -122,19 +140,24 @@ a:focus {
 /* PC用 CTAボタン（ヘッダー内） */
 .header-cta {
     display: flex;
-    gap: 10px;
+    gap: 8px;
+    flex-shrink: 0;
 }
 
 .btn-header-contact {
     background-color: var(--color-blue);
     color: var(--color-white) !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
+    padding: 8px 14px !important;
+    white-space: nowrap;
 }
 
 .btn-header-donate {
     background-color: var(--color-accent);
     color: var(--color-white) !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
+    padding: 8px 14px !important;
+    white-space: nowrap;
 }
 
 /* ============================================
